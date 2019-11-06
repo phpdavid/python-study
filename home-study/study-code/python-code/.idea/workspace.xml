@@ -18,7 +18,7 @@
   <component name="ProjectId" id="1T4KZZm2bJX5Cno5gJ6Rmo2Yeux" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/four" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,13 +36,14 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\good_study_day_up\home-study\study-code\python-code\four" />
+      <recent name="D:\study-code\python-code\three" />
+      <recent name="D:\study-code\python-code" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\study-code\python-code\three\t" />
       <recent name="D:\study-code\python-code\test" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study-code\python-code\three" />
-      <recent name="D:\study-code\python-code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,6 +104,7 @@
       <workItem from="1572930808538" duration="2111000" />
       <workItem from="1572935416527" duration="762000" />
       <workItem from="1572936989558" duration="997000" />
+      <workItem from="1573016214143" duration="2106000" />
     </task>
     <servers />
   </component>
