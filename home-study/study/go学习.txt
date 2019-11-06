@@ -1,0 +1,125 @@
+变量定义要点
+    变量类型写在变量名之后
+    编译器可以推测变量的类型
+    没有char，只有rune
+    原生支持复数类型
+
+变量定义
+    //函数外定义变量
+    	var aa = 3 //函数外定义变量不可以用ss := "ss"这种形式，必须使用var关键字
+    	var ss = "ss" //函数外定义的变量不是全局变量，是包内部的变量，作用域是包内部，没有全局变量的说法
+    	var ( //放到一起定义变量
+    		bb =66
+    		cc =true
+    	)
+
+    const outConst string = "test.go" //函数外定义常量,go中不需要全部大写，首字母大小写有不同的含义
+
+    const ( //一组常量的定义
+    	out2  = "out2"
+    	out3 = 96
+    )
+
+
+    //初始化变量
+    func varZoreValue() {
+    	var a int
+    	var s string
+    	fmt.Printf("%d,%q\n", a, s)
+
+    }
+
+    //变量赋值
+    func varInitValue() {
+    	var a, b int = 1, 2
+    	var s string = "s"
+    	fmt.Println(a, b, s)
+    }
+
+    //不用声明变量类型，GO自动推导
+    func varTypeValue() {
+    	var a, b, c, d = 1, 2, true, "def"
+
+    	var s = "s"
+    	fmt.Println(a, b, s, c, d,bb,cc,aa)
+    }
+
+    //省略写法
+    func varShotValue() {
+    	 a, b, c, d := 1, 2, true, "def"//定义变量，定义完了还可以赋值
+    	 b = 5//先定义在负值
+
+    	 s := "s"
+    	fmt.Println(a, b, s, c, d)
+    }
+
+
+内建变量类型
+    bool
+        布尔类型
+    string
+        字符串类型
+    (u)int (u)int8 (u)int16 (u)int32 (u)int64 uintptr
+        //分两类，1规定长度的int8,2不规定长度int，长度跟随操作系统位数，uintptr指针
+    byte，rune
+        //rune 就是char类型，一字节
+    float32 float64 complex32 complex64 complex128
+
+    强制类型转换，go中所有的类型转换全部是强制的
+        int(float(0.1))
+
+常量
+    const outConst string = "test.go" //函数外定义常量,go中不需要全部大写，首字母大小写有不同的含义
+
+    const ( //一组常量的定义
+    	out2  = "out2"
+    	out3 = 96
+    )
+
+    特殊的常量-枚举类型
+        //定义枚举类型,go中没有专门定义枚举的关键字，一般用const定义
+        func enums() {
+        	const (
+        		cpp = 1
+        		java = 2
+        		php = 3
+        		python = 4
+        	)
+        //iota自增
+        func enumsAuto() {
+        	const (
+        		cpp = iota //自增
+        		java
+        		php
+        		python
+        	)
+        	fmt.Println(cpp,java,php,python)
+        }
+
+条件分支
+    if的条件里可以赋值
+    if的条件里赋值的变量的作用域只在这个if语句里
+
+    switch
+        //switch分支
+        func eval(a,b int,op string) int {
+        	var result int
+        	switch op {
+        	case "+":
+        		result = a + b
+        	case "-":
+        		result = a - b
+        	case "*":
+        		result = a * b
+        	case "%":
+        		result = a % b
+        	default:
+        		panic("unsupported operation" + op)
+        	}
+        	return  result
+        }
+
+循环
+
+
+
