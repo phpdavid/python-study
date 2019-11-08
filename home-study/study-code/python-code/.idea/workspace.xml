@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b60301c-61bd-4af0-ba71-58e37b488e41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../study/python笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../study/python笔记.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -113,7 +113,7 @@
       <workItem from="1572936989558" duration="997000" />
       <workItem from="1573016214143" duration="2106000" />
       <workItem from="1573103179259" duration="1622000" />
-      <workItem from="1573174897748" duration="248000" />
+      <workItem from="1573174897748" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="IDE commit">
       <created>1573103439292</created>
