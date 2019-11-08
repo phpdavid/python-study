@@ -337,7 +337,22 @@
         damages_result1, damages_result2 = damage(99, 66)  # 赋值给两个变量，有助于代码更加的清晰
         print(damages_result1, damages_result2)
 
-        40.39
+        序列解包
+            print(type(d))
+
+            a, b, c = d  # 序列解包
+            print(a, b, c)
+        函数参数
+            1 必须参数
+            2 关键字参数
+                def add_test(a, b):#形参
+                    d = a + b
+                    return d
+
+                #这里是实参
+                e = add_test(b=4, a=6) #这里是关键字参数，可以指定参数是什么值,意义在于代码的可读性
+                print(e)
+57.15
 
 
 
