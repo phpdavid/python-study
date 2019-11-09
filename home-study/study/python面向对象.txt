@@ -70,5 +70,33 @@
     当静态方法和类和对象没有太大关系的时候用，最好
     原则上不推荐使用静态方法
 
-    公开和私有
+    公开和私有（私有没有关键字，通过在名字前面加两个下划线表示私有,严格意义上来说，python
+               是没有私有的，通过__dict__查看元素名称依然可以打印出来）
+            # 私有函数
+            __name = 'xiaoming'  # 姓名，年龄是个体的属性，不是群体的属性，不建议
+            # 共有函数
+            name = 'david'
+            # 私有方法
+            def __get(self):
+                print(self.score)
+
+            # 共有方法
+            def get(self):
+                print(self.score)
+
+    面向对象三大特性
+        继承性
+            # 学生类
+            from three import Human  # 导入模块
+
+
+            class Student(Human):  # 继承父类，括号中是父类
+            构造方法继承
+            super(Student, self).__init__(name, age)  # super关键字调用父类的构造函数
+            super(Student, self).say() #继承父类的方法
+
+            多继承
+
+        封装性
+        多态性
 
