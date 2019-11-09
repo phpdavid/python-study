@@ -337,7 +337,7 @@
         damages_result1, damages_result2 = damage(99, 66)  # 赋值给两个变量，有助于代码更加的清晰
         print(damages_result1, damages_result2)
 
-        40.39
+
 
 
 

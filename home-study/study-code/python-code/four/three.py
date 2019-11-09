@@ -13,5 +13,5 @@ def add_test(a, b):
     return d
 
 
-e = add_test(a=4, b=6)
+e = add_test(b=4, a=6)
 print(e)
