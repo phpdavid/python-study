@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b60301c-61bd-4af0-ba71-58e37b488e41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/four/three.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../study/python笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../study/python笔记.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,7 +112,8 @@
       <workItem from="1572935416527" duration="762000" />
       <workItem from="1572936989558" duration="997000" />
       <workItem from="1573016214143" duration="2106000" />
-      <workItem from="1573103179259" duration="1580000" />
+      <workItem from="1573103179259" duration="1622000" />
+      <workItem from="1573174897748" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="IDE commit">
       <created>1573103439292</created>
@@ -123,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573103439292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="函数">
+      <created>1573104787442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573104787442</updated>
+    </task>
+    <task id="LOCAL-00003" summary="函数">
+      <created>1573174924613</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573174924613</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +147,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -142,7 +157,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="IDE commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDE commit" />
+    <MESSAGE value="函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="函数" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_code$loop.coverage" NAME="loop Coverage Results" MODIFIED="1572932047093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
