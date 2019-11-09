@@ -35,4 +35,40 @@
     类变量和实例变量
         类变量是和类相关联的变量
         实例变量是和实例相关联的变量
-01.11.11
+    __dict__内置变量，打印出类所有的变量
+        print(student.__dict__) #打印出类包含的元素
+        print(Student.__dict__)
+    当我们访问一个类的变量的时候，类会先到实例变量（构造函数中找），如果没有就去找类变量，如果类中没有
+    将会去父类中寻找
+    操作类变量
+            def __init__(self, name, age):
+                # 初始化对象的属性
+                self.name = name  # 实例变量
+                self.age = age
+                # self.__class__.sum+=1 #操作类变量加一操作
+                # print(self.__class__.sum)
+    类方法
+        定义
+                @classmethod  # 装饰器
+                def plus_count(cls):  # 主要用于操作类变量的操作
+                    cls.sum += 1
+                    print(cls.sum)
+
+                Student.plus_count()  ##调用类方法
+                实例化对象也可以调用类方法，但是不建议这么做，容易混淆类和对象的概念
+    静态方法
+        定义
+                # 定义静态方法
+                @staticmethod
+                def make_wood(x, y):  # 不需要cls,self这些关键字
+                    print("this is a static method")
+        调用
+                student.make_wood(1, 2)  # 对象调用
+                Student.make_wood(3, 4)  # 类调用
+    类方法和静态方法不可以调用实例变量
+    静态方法和普通方法没有太多区别，而且类方法也可以方法类变量，可以代替静态方法，
+    当静态方法和类和对象没有太大关系的时候用，最好
+    原则上不推荐使用静态方法
+
+    公开和私有
+

@@ -15,15 +15,25 @@ class Student():
 
     # 定义类方法
     @classmethod  # 装饰器
-    def plus_count(cls):  # 主要用于操作类变量的操作
+    def plus_count(cls):  # cls代表类本身， 主要用于操作类变量的操作
         cls.sum += 1
         print(cls.sum)
+        # print(self.name) #不能请求对象的变量
 
     # 定义实例方法
-    def speak(self):
+    def speak(self):  # self代表对象本身
+        self.eat()
         print("my 类 name is " + __class__.name + " i am " + str(__class__.age) + " years old")
         print("my 对象 name is " + self.name + " i am " + str(self.age) + " years old")
 
+    def eat(self):
+        print('i like beef')
+
+    # 定义静态方法
+    @staticmethod
+    def make_wood(x, y):  # 不需要cls,self这些关键字
+        print("this is a static method")
+        # print(self.name)#不能请求对象的变量
 # class Printer():
 #     def print_file(self):  # 这里必须要加self
 #         print('name:' + self.name)
