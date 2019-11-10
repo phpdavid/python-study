@@ -11,7 +11,7 @@ def convert(value):
     return "__" + mathod + "__"  # 返回加工后的值
 
 
-r = re.sub('PHP', convert, language)  # 传入一个函数
+r = re.sub('PHP', convert, language)  # 传入一个函数，动态的替换
 print(r)
 # # 字符串函数替换
 # d = language.replace('Java', 'JS')
