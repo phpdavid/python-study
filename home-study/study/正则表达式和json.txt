@@ -1,0 +1,93 @@
+正则表达式
+    正则表达式是一个特殊字符的序列，一个字符是否与我们所设定的字符相匹配
+    快速检测文本，实现一些替换文本的操作
+        1 检测电话号码
+        2 检测EMAIL
+        3 替换文本
+    匹配单个字符示例
+        import re  # 引入正则表达式模块
+
+        a = "c|c++|java|php|php|go|php"
+        ## 通过python内置变量查找字符串，优先使用
+        # print(a.index("python") > 1)
+        # print('python' in a)
+        ## 正则表达式查找普通字符
+        # result = re.findall('python', a)
+        # if len(result) > 0:
+        #     print('a 中包含python', result)
+        # else:
+        #     print('a 中不包含python')
+
+        ## 正则表达式，元字符
+        b = "adg2kj3n4n5bn6b3n3nb5b43n2n7"
+        r = re.findall('\d', b)
+        print(r[0:2])
+    示例中“python” 这样的字符，叫元字符，“\d”叫元字符
+        ##字符集
+        s = 'abc,agc,afc,acc,aec'
+
+        r = re.findall('a[cf]c', s)  ##带有c或者f的单词[cf]中c和f是或的关系
+        r = re.findall('a[^cf]c', s)  ##取反，没有c或者f的单词
+        r = re.findall('a[c-f]c', s)  ##匹配c-f的单词
+        print(r)
+
+        ##概括字符集
+        b = "adg2kj3n4n5bn6b3n3nb5b43n2n7"
+        #常用概括字符集
+        # re.findall('\d', b)  # 概括字符集，匹配所有的数字 \d = [0-9]
+        # re.findall('\D', b)  # 概括字符集，匹配所有非数字 \D = [^0-9]
+        # r = re.findall('\w', b)  # 概括字符集，匹配所有数字和非字母和下划线[A-Za-z0-9_]
+        # r = re.findall('\W', b)  # 概括字符集，匹配所有非数字，非字母和非下划线[^A-Za-z0-9_]
+        # r = re.findall('\s', b)  # 概括字符集，空格，回车，制表符等空白字符，不包括&
+        # r = re.findall('\S', b)  # 概括字符集,非空白字符
+        # r = re.findall('.', b)  # 概括字符集,除换行符\n之外所有字符
+    不管是字符集还是概括字符集都只能匹配一个字符
+    ##数量词
+        b = "adg2kj3 n4n5bn6b\n\t\r3n3nb5pythonb4&*@3n2javan7_php"
+
+        # r = re.findall('[a-z]{3,6}', b)  # 大括号表示重复中括号中的匹配，3,6表示匹配字符串的位数，最小3位，最大6位
+        r = re.findall('[a-z]{3,6}?', b)  # 非贪婪模式，大括号表示重复中括号中的匹配,匹配到就结束
+        print(r)
+        贪婪和非贪婪模式
+        正则表达式倾向于贪婪模式，竟可能的匹配更多
+    匹配数量词*+?
+        b = 'pytho0python1pythonn2'
+        # r = re.findall('python*', b)  # “*”匹配前面的字符0次或者n次
+        # r = re.findall('python+', b)  # “+”匹配前面的字符1次或者n次
+        r = re.findall('python?', b)  # “+”匹配前面的字符0次或者1次 ##pythonn这种情况，也会匹配到，后面一个n会被删掉，因为只能出现一次
+    ### ?的使用场景{3,6}?在范围之后出现表示非贪婪，在字符后出现表示重复
+
+    边界匹配
+        b = '88560200058'
+
+            r = re.findall('^\d{4,8}$', b) #边界匹配^开始$结束,限定字符串的边界，
+            ##^表示从头开始匹配，$表示从末位开始匹配，可以单独使用
+            print(r)
+    组
+        b = 'pythonpythonpythonpythonpythonjs'
+        r = re.findall('(python){3}', b)##()表示组，re.findall('(python){3}(js){1}', b),可以有多个组
+        print(r)
+
+    替换
+        language = 'PythonC#JavaPHP'
+        # 正则替换
+        r = re.sub('PHP', 'GO', language)
+        # 字符串函数替换
+        d = language.replace('Java', 'JS')
+        # 字符串替换有限使用内置函数，解决不了的，在使用正则表达式，内置函数解决不了的，正则表达式都能解决
+        print(d)
+
+        正则替换传入一个函数
+            def convert(value):
+                print(value)  # value是个对象
+                mathod = value.group()  # 通过对象group方法拿到匹配到的值
+                return "__" + mathod + "__"  # 返回加工后的值
+
+
+            r = re.sub('PHP', convert, language)  # 传入一个函数
+
+
+
+
+
+JSON
