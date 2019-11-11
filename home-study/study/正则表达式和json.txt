@@ -112,4 +112,30 @@ JSON
         易于阅读
         易于解析（跨语言交换数据）
         网络传输效率高
-    0242
+    反序列化
+        把字符串解析成一种语言的数据结构的过程，叫做反序列化
+            import json
+
+            # json中不止一种数据格式，还有object对象，array数组，str字符串
+            json_str = '{"name":"david"}'  # json字符串在js中是一个对象，在pythonh中是一个字典
+            json_array = [{"name": "david"}, {"name": "david"}]  # 有两个对象的json数组，组数就是一个集合
+            # 文件命名不能使用json
+            student = json.loads(json_array)  # 转换为有两个字典的列表
+            # student = json.loads(json_str) #转换为字典
+            print(type(student))
+
+    json对应python的数据类型
+        json    python
+        object  dict
+        array   list
+        string  str
+        number  int
+        number  float
+        true    True
+        false   False
+        null    None
+    json对象  json    json字符串
+        符合json格式的字符串叫做json字符串
+        JSON是一种数据格式
+        json对象是急于JavaScript讲的，其实本身并没有对象一说
+    JSON是REST服务的标准格式
