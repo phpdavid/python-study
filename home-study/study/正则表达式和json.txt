@@ -99,7 +99,7 @@
         print(re.findall('life(.*)python', a))  # findall直接返回匹配到的结果
         r4 = re.search('life(.*)python(.*)python', a)#多个分组
         print(r4.group(0, 1, 2))#获取多个分组，是一个元祖
-
+0209
 
 
 
