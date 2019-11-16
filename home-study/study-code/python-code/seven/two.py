@@ -15,4 +15,6 @@ def curve_pro():  # 闭包=函数+环境变量
 a = 100  # 模块中的变量
 f = curve_pro()
 
-print(f(23))  # 打印闭包
+# print(f(23))  # 打印闭包
+# print(f.__closure__)  # 闭包的环境变量的实质保存在__closure__函数
+print(f.__closure__[0].cell_contents)  # 打印环境变量
