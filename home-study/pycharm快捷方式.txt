@@ -1,2 +1,4 @@
 ALT+ 方向左右键，切换项目中编辑的文件
 SHIFT+TAB 回退制表符
+ALT+ INSER 添加新文件
+SHIFT + F4关闭当前的TAB

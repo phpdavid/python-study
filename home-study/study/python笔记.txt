@@ -250,7 +250,18 @@
 
             b = a[0:len(a):2]  # 利用列表的切片去除元素，第一个参数是起始位置，第二个是切片的长度，第三个是步长
             print(b)
+            #遍历元素，每个元素2次方，返回列表
+                list_x = [4, 7, 3, 4]
 
+
+                def sque(x):
+                    return x * x
+
+
+                # for i in range(len(list_x)):#遍历的方式
+                #     list_x[i] = sque(list_x[i])
+                #
+                # print(list_x)
             # 遍历字典,相当于PHP foreach()循环
             for a in condition_dict:
                 print(a)  # 打印key
