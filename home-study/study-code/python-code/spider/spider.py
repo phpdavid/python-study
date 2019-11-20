@@ -3,23 +3,31 @@ from urllib import request
 
 
 class Spider():
-    url = "https://music.douban.com/"
-    root_patten = '<div class="player-round-btn-bg">[\s\S]*?</div>'
+    url = "http://jewelry.xbiao.com/"
+    root_patten = '<div class="main-content">([\s\S]*?)</ul>'
+    name_patten = '<span>([\s\S]*?)</span>'
+    price_patten = '<i>([\s\S]*?)</i>'
 
     def __fetch_contents(self):
         r = request.urlopen(Spider.url)
         html = r.read()
         html = str(html, encoding='utf-8')
         return html
-        # a=1
 
-    def __analysiy(self, html):
-        root_html = re.findall(Spider.root_patten, html)
-        print(root_html[0])
+
+    def __analysiy(self, htmls):
+        root_html = re.findall(Spider.root_patten, htmls)
+        brands = []
+        for html in root_html:
+            name = re.findall(Spider.name_patten, html)
+            price = re.findall(Spider.price_patten, html)
+            brand = {'name': name,'price': price}
+            brands.append(brand)
+        print(brands)
 
     def go(self):
         html = self.__fetch_contents()
-        self.__analysiy(html)
+        sec_html = self.__analysiy(html)
 
 
 result = Spider()
