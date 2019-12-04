@@ -33,7 +33,7 @@
 	(1,2,3,4)[3:4]
 	(1,2,3,4)[4:]
 
-  set 集合(无序) {1,2,3,4} 类似php中关联数组
+  set 集合(无序) {1,2,3,4}
 	不可通过下标取值，不可切片操作{1,2,3}[9] ，不重复，定义一个空的集合set()
 
 	和序列相同的操作
@@ -48,6 +48,15 @@
 	求两个集合的差集	{1,2,3,4,5,6}-{4,5}
 	求两个集合的交集	{1,2,3,4,5,6}&{4,5}
 	求两个集合的并集	{1,2,3,4,5,6} | {4,5,9}    #合并两个集合，不能出现重复
+
+    e = {9, 8, 7, 6, 5, 4, 4, 3, 2, "1"}
+
+    # for i in range(len(e)):#遍历key
+    #     print(i)
+    # for i in e:#遍历value
+    #     print(i)
+
+
 
   dict字典（key,value）类似php中关联数组
 	{key1:value1,key2:value2} 字典不可以有重复的键，必须是不可变类型
@@ -277,6 +286,32 @@
                 print(kv)
             for key, value in condition_dict.items():
                 print(key + ':' + value)
+
+            f = {'a': "apple", "b": "banana", "c": "wc"}
+
+
+            #
+            # for key, value in zip(f.keys(), f.values()):
+            #     print(key, type(key), value, type(value))
+            # for kv in zip(f.keys(), f.values()):  # kv是元祖类型
+            #     print(kv, type(kv))
+
+            def keys_function(f):
+                keys = []
+                for key in f.keys():
+                    keys.append(format(key))
+                return keys
+
+
+            def values_function(f):
+                values = []
+                for value in f.values():
+                    values.append(format(value))
+                return values
+
+
+            print(keys_function(f), type(keys_function(f)))
+            print(values_function(f), type(values_function(f)))
 
 
 包，模块，函数，变量和作用域

@@ -62,5 +62,50 @@
         r = QQ_vip(a)
         print(type(r))
 
+python 字典代替switch
+    # 字典代替switch语句
+    # day = 6
+    # switcher = {
+    #     0:'sun',
+    #     1:'mon',
+    #     2:'tues'
+    # }
+    #
+    # switch = switcher.get(day,'unknow')
+    #
+    # print(switch)
+    #switch 函数
+    day = 1
+
+
+    def get_sun():
+        return "sun"
+
+
+    def get_mon():
+        return "mon"
+
+
+    def get_tues():
+        return "tues"
+
+
+    def get_default():
+        return "unknow"
+
+
+    switcher = {
+        0: get_sun,
+        1: get_mon,
+        2: get_tues,
+    }
+    switch = switcher.get(day, get_default)
+
+    print(switch())
+# 列表推导式
+    a = [1, 2, 3, 4, 5]
+    b = [i ** 2 for i in a if i >= 3]  # if 可选筛选条件
+    print(b)
+
 
 
