@@ -1,6 +1,7 @@
 from functools import reduce
 from random import randint, sample
 
+# 公共键
 names = ['david', 'tom', 'zhou', 'dayu', 'moto', 'jim']  # 定义一组球员名字
 s1 = {x: randint(1, 3) for x in sample(names, randint(3, 6))}  # 为球员随机生成每场得分
 s2 = {x: randint(1, 3) for x in sample(names, randint(3, 6))}  # 为球员随机生成每场得分
