@@ -1,0 +1,91 @@
+函数式编程
+        python中一切皆对象
+        闭包
+
+            def curve_pro():  # 闭包=函数+环境变量
+                a = 25  # 环境变量
+
+                def curve(x):  # 被定义，并没有被执行，返回到我们的模块中，
+                    # 当我们在模块中调用curve的时候，内部a的值，不会去模块中的变量，而是取的定义的时候的环境变量
+                    # 这就是闭包
+                    return a * x * x
+
+                return curve  # 函数可以被返回
+
+
+            a = 100  # 模块中的变量
+            f = curve_pro()
+
+            print(f(23))  # 打印闭包
+        在函数的外部简介的调用函数内部的变量
+        闭包保存环境变量的问题，保存在常驻内存，非常消耗内存，在服务器端还好，js在浏览器端容易缓慢
+匿名函数
+        # 把add函数用匿名函数实现，也叫作lambda表达式
+        f = lambda x, y: x + y  # 匿名函数的关键字，不是所有的函数的代码块都可以放到匿名函数，
+        # 只能是表达式，不能写代码块，不需要return去返回结构，自动返回结果，
+        print(f(1, 2))  # 调用匿名函数，先复制给一个变量，再调用变量
+三元表达式
+    条件为真返回的结果 if 条件判断 else 条件为假返回的结果
+        其他语言的格式 x >y ? x :y
+        python x if x >y else y
+    三元表达式非常适合做lambda表达式
+
+map类
+    # r = map(sque,list_x)
+    r = map(lambda x, y: x * x + y, list_x, list_y)  # lambda+map配合,
+    #二者并不能提高代码的效率，只能使代码更加简洁
+    print(list(r))
+
+filter函数
+    list_a = [9, 0, 9, 0, 9, 0]
+    r = filter(lambda x: True if x == 9 else False, list_a)  # filter要求lambda表达式的返回结果为True或False
+    print(list(r))
+
+装饰器 @decorator
+
+    import time
+
+
+    def f1():
+        print('f1')
+
+
+    def f2():
+        print('f2')
+
+
+    def f3():
+        print('f3')
+
+
+    # 给每个函数添加打印时间的功能，不能违反封闭原则：对修改是封闭的，对扩展是开放的
+    # 定义一个打印时间的函数，调用原有的函数
+    def print_current_time(func):
+        print(time.time())
+        func()
+
+
+    print_current_time(f1)
+    print_current_time(f2)
+    print_current_time(f3)
+
+
+    # 用装饰器模式改造
+    def decorator(func):
+        def wrapper():
+            print(time.time())
+            func()
+
+        return wrapper
+
+
+    @decorator  # python语法糖
+    def f4():
+        print('f4')
+
+
+    f4()
+    # f = decorator(f4)#传统调用装饰器
+    # f()
+
+

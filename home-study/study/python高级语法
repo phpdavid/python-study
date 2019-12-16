@@ -1,0 +1,111 @@
+枚举
+    from enum import Enum
+
+
+    # 定义枚举,枚举的表示全部用大写表示，python中枚举是一个类
+    class VIP(Enum):
+        YELLOW = 1  # 大写表示常量
+        YELLOW1 = 1  # 默认情况下，遍历别名不会被打印出来
+        RED = 2  # 名字不能相同，当值相同的时候，第二个名字，会被当做第一个名字的别名
+        BLACK = 3
+        GOLDEN = 4
+
+    #如果没有枚举类，我们怎么定义枚举
+        #模块中直接定义变量（最差的方式）
+        #yellow = 1
+        #red =2
+        #black = 3
+        #用字典的方式,这种有数据标签
+        #{'yellow':1,'red':2,'black':2}
+        #封装类
+        # class QQ_VIP():
+        #     yellow = 1
+        #     red = 2
+        #     black =3
+        #这三种方式的缺陷
+            #1可以修改值，类型数据是不能轻易修改的
+            #2不能检查重复的的值
+    枚举的遍历和打印
+            QQ_vip = VIP
+        for v in QQ_vip.__members__.items():  # 连同别名一起打印，返回元祖
+            print(v)
+        # QQ_vip.RED = 6#枚举不可以被更改
+        # print(QQ_vip.YELLOW)#这样不能打印YELLOW的值，打印是枚举的类型
+        # print(QQ_vip.YELLOW.value)  # 打印YELLOW的值
+        # print(QQ_vip.YELLOW.name)  # 打印YELLOW的名称
+        # print(VIP.RED)#打印枚举的类型
+        # 枚举的比较
+        r = QQ_vip.RED.value < QQ_vip.BLACK.value  # 枚举之间是不能做大小比较的，但是可以做等值比较，身份is比较，值可以比较
+        print(r)
+        # for v in QQ_vip:  # 遍历枚举
+        #     print(v)
+    枚举的比较
+        # 如果没有枚举类，我们怎么定义枚举
+        # 模块中直接定义变量（最差的方式）
+        # yellow = 1
+        # red =2
+        # black = 3
+        # 用字典的方式,这种有数据标签
+        # {'yellow':1,'red':2,'black':2}
+        # 封装类
+        # class QQ_VIP():
+        #     yellow = 1
+        #     red = 2
+        #     black =3
+        # 这三种方式的缺陷
+        # 1可以修改值，类型数据是不能轻易修改的
+        # 2不能检查重复的的值
+    数据库存储枚举的值（数字）
+
+    如何把数据库的值和枚举类型对应
+        a = 1
+        r = QQ_vip(a)
+        print(type(r))
+
+python 字典代替switch
+    # 字典代替switch语句
+    # day = 6
+    # switcher = {
+    #     0:'sun',
+    #     1:'mon',
+    #     2:'tues'
+    # }
+    #
+    # switch = switcher.get(day,'unknow')
+    #
+    # print(switch)
+    #switch 函数
+    day = 1
+
+
+    def get_sun():
+        return "sun"
+
+
+    def get_mon():
+        return "mon"
+
+
+    def get_tues():
+        return "tues"
+
+
+    def get_default():
+        return "unknow"
+
+
+    switcher = {
+        0: get_sun,
+        1: get_mon,
+        2: get_tues,
+    }
+    switch = switcher.get(day, get_default)
+
+    print(switch())
+# 列表推导式
+    a = [1, 2, 3, 4, 5]
+    b = [i ** 2 for i in a if i >= 3]  # if 可选筛选条件
+    print(b)
+
+
+
