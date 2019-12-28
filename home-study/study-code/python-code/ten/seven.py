@@ -6,7 +6,7 @@ from pip._vendor.distlib.compat import raw_input
 
 d = OrderedDict()
 players = list('ABCDEFGH')
-pos = len(players)-1
+pos = len(players) - 1
 start = time()
 
 for i in range(len(players)):
@@ -14,8 +14,6 @@ for i in range(len(players)):
 
     p = players.pop(randint(0, pos - i))
     end = time()
-    d[p] = (i+1,end - start)
-for k,v in d.items():
-    print(k,v)
-
-
+    d[p] = (i + 1, end - start)
+for k, v in d.items():
+    print(k, v)
