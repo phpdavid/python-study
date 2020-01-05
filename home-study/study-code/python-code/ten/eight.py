@@ -28,4 +28,6 @@ while True:
         if guess(k):
             break
     elif line == 'history' or line == 'h':
-        print(history)
+        pickle.dump(history, open('test', 'w'))
+        p = pickle.load(open('test'))
+        print(p)
